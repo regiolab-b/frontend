@@ -1,18 +1,35 @@
 import React from 'react';
-import {Navbar} from './Navbar.js'
-import { Router } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import News from './News';
+import Profile from './Profile';
 
 
 export class Header extends React.Component {
     render() {
         return (
-                <div className="header">
+            <Router>
+              <div className="header">
                   <div className="title">
-                    <h1>Regiolab</h1>
-                    <Navbar/>
+                      <div className="navbar">             
+                        <h1>Regiolab</h1>
+                      </div>
+                      <Link to={'/'} className="nav-link"> Home </Link>
+                      <Link to={'/news'} className="nav-link">News </Link>
+                      <Link to={'/profile'} className="nav-link">Profile</Link>
                   </div>
-                </div>
-              );
+              </div>
+
+              <div className="pages">
+                  <Switch>         
+                      <Route exact path='/' component={Home} />
+                      <Route path='/news' component={News} />
+                      <Route path='/profile' component={Profile} />
+                  </Switch>
+              </div>
+                
+            </Router>    
+        );
     }
 }
 
