@@ -1,18 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import Home from './Home';
+import News from './News';
+import Profile from './Profile';
 
 
-export class Navbar extends React.Component {
+export class Navbar extends Component {
     render() {
         return (
             <Router>
-                <div className="navbar">
-                    <nav>
-                            <Link to="/home">Home</Link>
-                            <Link to="/news">News</Link>
-                            <Link to="/profile">Profile</Link>
+                <div>
+                    <nav className="navbar">
+                    <Link to={'/'} className="nav-link"> Home </Link>
+            <Link to={'/news'} className="nav-link">News</Link>
+            <Link to={'/profile'} className="nav-link">Profile</Link>
                     </nav>
-                </div>
+                    </div>
+                    <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/news' component={News} />
+              <Route path='/profile' component={Profile} />
+          </Switch>
+                
             </Router>    
         );
     }
