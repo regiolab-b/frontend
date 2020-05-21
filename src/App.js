@@ -4,14 +4,23 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import {Header} from './components/Header'
 
-class App extends React.Component {
-  render() {
-    return (
-    <Header></Header>
-    
+import {Home} from './pages/Home'
+import {Article} from './pages/Article'
 
-    );
-  }
+function App() {
+  return (
+    <Router>
+    <Header/>
+
+      <div className="App">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/articles/:id/" component={Article} />
+          </Switch>
+      </div>
+
+    </Router>
+  );
 }
 
 export default App;
