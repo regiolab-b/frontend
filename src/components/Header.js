@@ -10,14 +10,14 @@ export class Header extends React.Component {
         return (
             <Router>
               <div className="header">
-                  <div className="title">
-                      <div className="navbar">             
+                  <div className="title">           
                         <h1>Regiolab</h1>
                       </div>
-                      <Link to={'/'} className="nav-link"> Home </Link>
-                      <Link to={'/news'} className="nav-link">News </Link>
-                      <Link to={'/profile'} className="nav-link">Profile</Link>
-                  </div>
+                      </div>
+                      <div className="navbar"> 
+                      <Link to={'/'} > Home </Link>
+                      <Link to={'/news'} >     News </Link>
+                      <Link to={'/profile'} >Profile</Link>
               </div>
 
               <div className="pages">

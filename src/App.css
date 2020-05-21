@@ -6,19 +6,49 @@
 
 .title {
   font-family: helvetica;
-  font-size:16px;
+  font-size:18px;
   color:black;
   text-align: center;
+  
 }
 
 .navbar {
   font-family: helvetica;
-  font-size:14px;
+  font-size:16px;
   color: black;
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 1%;
+  overflow: hidden;
+  margin-top:1%;
+  font-weight: bold;
+  position: sticky;
+
+}
+
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover { 
+  color: orangered;
+}
+
+a {
+  color: black;
+  word-spacing: 25px;
 }
 
 .pages {
   
+}
+
+.headerfoto {
+  margin-top:4%;
+  width: 100%;
+  height: auto;
+
 }
 
 @media only screen and (max-width: 700px) {
