@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
+import { Link } from "react-router-dom";
 
 export const ArticleContainer = () => {
     const [articles, setArticle] = useState([]);
@@ -21,7 +22,9 @@ export const ArticleContainer = () => {
         <div>
             {articles.map((article, index) => (
                 <>
-                <h1>{article.headline}</h1>
+                <Link to={`/articles/${article._id}`}>
+                    <h1>{article.headline}</h1>
+                </Link>
                 <p>{article.lead}</p>
                 </>
             ))}
