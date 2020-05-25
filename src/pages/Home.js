@@ -1,11 +1,14 @@
-import React from 'react'
-import { ArticleContainer } from '../containers/ArticleContainer'
+import React, { Component } from 'react';
 
-export const Home = () => {
+
+class Home extends Component {
+  render() {
     return (
-        <div>
-            <ArticleContainer/>
+        <div className="">
+           
         </div>
-    )
+    );
+  }
 }
 
+export default Home;
