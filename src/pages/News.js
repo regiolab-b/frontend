@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Profile = () => {
+export const News = () => {
   return (
     <div>
-      <h2>Profile</h2>
+      <h2>News</h2>
     </div>
   )
 }
