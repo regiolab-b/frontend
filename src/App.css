@@ -4,6 +4,24 @@
 
 }
 
+.header-detail {
+  text-align: center;
+  margin-top: 3%;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.header-detail:hover {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.date {
+  margin-left: 3%;
+  margin-top: 2%;
+  font-style: oblique;
+}
+
 a.brand-title:hover {
   color: #ff6600;
   text-decoration: none;

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
+import '../App.css';
 
 export const Article = () => {
     const [article, setArticle] = useState([]);
@@ -23,8 +24,14 @@ export const Article = () => {
     
     return (
         <div>
-            <h1>{ article.headline }</h1>
-            <div dangerouslySetInnerHTML={{__html: article.body}}></div>
+            <div className="date">
+                <p1>{article.pubDate}</p1> 
+            </div>    
+            <div class="header-detail">
+                <h2>{ article.headline }</h2>
+            </div>
+            <br></br>
+            <div class="container" dangerouslySetInnerHTML={{__html: article.body}}></div>
         </div>
     )
 }
