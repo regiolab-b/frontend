@@ -18,7 +18,7 @@ export const Article = () => {
             }
             //restart function
         })  
-    }, []);
+    }, [id]);
      
     
     return (
