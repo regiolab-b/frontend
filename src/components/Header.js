@@ -1,12 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
-import {Home} from '../pages/Home';
-import {News} from '../pages/News';
-import {Profile} from '../pages/Profile';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
-    <Router>
       <nav class="navbar sticky-top navbar-expand-md bg-dark navbar-dark">
         <Link to={'/'} class="brand-title" > Regiolab </Link>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -26,16 +22,6 @@ export const Header = () => {
           </ul>
         </div>  
       </nav>
-
-    <div className="pages">
-        <Switch>         
-            <Route exact path='/' component={Home} />
-            <Route path='/news' component={News} />
-            <Route path='/profile' component={Profile} />
-        </Switch>
-    </div>
-      
-  </Router>  
   )
 }
 

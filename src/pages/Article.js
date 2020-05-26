@@ -8,7 +8,7 @@ export const Article = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        articlesApi.getArticleDetails({ id }).then(data => setArticle(data.data)).catch((error) =>{
+        articlesApi.getArticleDetails(id).then(data => setArticle(data.data)).catch((error) =>{
             console.log(error.response.status)
             if (error.response.status === 401) {
                 accessTokenApi.getAccessToken().then((response)=> {
@@ -18,12 +18,13 @@ export const Article = () => {
             }
             //restart function
         })  
-    }, []);
+    }, [id]);
      
     
     return (
         <div>
             <h1>{ article.headline }</h1>
+            <div dangerouslySetInnerHTML={{__html: article.body}}></div>
         </div>
     )
 }
