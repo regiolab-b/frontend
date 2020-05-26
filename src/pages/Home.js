@@ -1,11 +1,12 @@
 import React from 'react'
 import { ArticleContainer } from '../containers/ArticleContainer'
+import { ControlledCarousel } from '../Carousel/Carousel'
 
-import { ArticleContainer } from '../containers/ArticleContainer.js'
 
 export const Home = () => {
     return (
         <div>
+            <ControlledCarousel/>
             <ArticleContainer />
         </div>
     )
