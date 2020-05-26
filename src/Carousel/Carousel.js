@@ -1,4 +1,4 @@
-import React, { useEffect, useState, render } from 'react';
+import React, { useState,} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Carousel} from 'react-bootstrap';
 
@@ -14,33 +14,23 @@ export const ControlledCarousel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="./src/header.png"
+            src="https://imgo.rgcdn.nl/dbefb3be3cba43c6907b22893c8830d8/opener/Burgemeester-Eddy-Bilder-over-de-gevolgen-van-de-corona-uitbraak-in-Zwartewaterland.jpg?v=ohtV25_oR68SONYEtnLbmA2"
+            alt=""
           />
-          <Carousel.Caption>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
+            src="https://imgo.rgcdn.nl/dbefb3be3cba43c6907b22893c8830d8/opener/Burgemeester-Eddy-Bilder-over-de-gevolgen-van-de-corona-uitbraak-in-Zwartewaterland.jpg?v=ohtV25_oR68SONYEtnLbmA2"
+            alt=""
           />
-  
-          <Carousel.Caption>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
+            src="https://imgo.rgcdn.nl/dbefb3be3cba43c6907b22893c8830d8/opener/Burgemeester-Eddy-Bilder-over-de-gevolgen-van-de-corona-uitbraak-in-Zwartewaterland.jpg?v=ohtV25_oR68SONYEtnLbmA2"
+            alt=""
           />
-  
-          <Carousel.Caption>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     );

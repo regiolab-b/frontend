@@ -7,6 +7,7 @@ export const Home = () => {
     return (
         <div>
             <ControlledCarousel/>
+            <br/>
             <ArticleContainer />
         </div>
     )
