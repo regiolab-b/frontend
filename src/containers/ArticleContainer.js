@@ -19,13 +19,21 @@ export const ArticleContainer = () => {
     }, []);
 
     return (
-        <div>
+        <div class="">
             {articles.map((article, index) => (
-                <>
-                <Link to={`/articles/${article._id}`}>
-                    <h1>{article.headline}</h1>
-                </Link>
-                <p>{article.lead}</p>
+                <>  
+                <div class="container pt-2">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
+                                    <p class="card-text">{article.lead}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </>
             ))}
         </div>
