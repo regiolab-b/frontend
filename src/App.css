@@ -1,7 +1,19 @@
 .header {
   background-color: orangered;
-  padding: 1px;
+  /* padding: 1px; */
 
+}
+
+a.brand-title:hover {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.brand-title {
+  font-family: 'Open Sans Condensed', sans-serif; 
+  font-size: 48px; 
+  color: rgb(255, 255, 255);
+  padding-right: 20px;
 }
 
 .title {
@@ -10,9 +22,9 @@
   color:black;
   text-align: center;
   
-}
+} 
 
-.navbar {
+/* .navbar {
   font-family: helvetica;
   font-size:16px;
   color: black;
@@ -23,8 +35,7 @@
   margin-top:1%;
   font-weight: bold;
   position: sticky;
-
-}
+} */
 
 
 a:link {
@@ -37,12 +48,9 @@ a:hover {
 
 a {
   color: black;
-  word-spacing: 25px;
+  /* word-spacing: 25px; */
 }
 
-.pages {
-  
-}
 
 .headerfoto {
   margin-top:4%;

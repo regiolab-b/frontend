@@ -7,16 +7,25 @@ import {Profile} from '../pages/Profile';
 export const Header = () => {
   return (
     <Router>
-    <div className="header">
-        <div className="title">           
-              <h1>Regiolab</h1>
-            </div>
-            </div>
-            <div className="navbar"> 
-            <Link to={'/'} > Home </Link>
-            <Link to={'/news'} > News </Link>
-            <Link to={'/profile'} >Profile</Link>
-    </div>
+      <nav class="navbar sticky-top navbar-expand-md bg-dark navbar-dark">
+        <Link to={'/'} class="brand-title" > Regiolab </Link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <Link to={'/'} class="nav-link" > Home </Link>
+            </li>
+            <li class="nav-item">
+              <Link to={'/news'} class="nav-link" > News </Link>
+            </li>
+            <li class="nav-item">
+              <Link to={'/profile'} class="nav-link" >Profile</Link>
+            </li>    
+          </ul>
+        </div>  
+      </nav>
 
     <div className="pages">
         <Switch>         
