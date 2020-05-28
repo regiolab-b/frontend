@@ -3,6 +3,7 @@ import { useParams, Link} from 'react-router-dom';
 import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
 import '../App.css';
 import Image from 'react-bootstrap/Image'
+import { RecommendedContainer } from '../containers/RecommendedContainer'
 
 export const Article = () => {
     const [article, setArticle] = useState([]);
@@ -27,12 +28,12 @@ export const Article = () => {
     return (
         <div>
             <div className="button">
-              <Link to={'/'} class="nav-link" > Go Back </Link>
-              </div>
+                <Link to={'/'} class="nav-link" > Go Back </Link>
+            </div>
     
 
             <div className="header-picture">
-            <Image src="https://dummyimage.com/hd1080" fluid />
+                <Image src="https://dummyimage.com/hd1080" fluid />
             </div>
 
             <div className="date">
@@ -42,13 +43,19 @@ export const Article = () => {
             <div class="header-detail">
                 <h2>{ article.headline }</h2>
             </div>
+
             <br></br>
+            
             <div class="container" dangerouslySetInnerHTML={{__html: article.body}}></div>
             <div class="recommended">
                 <div class="header-recommended">
                     <h3>Recommended articles</h3>
                 </div>
             </div>
+            <RecommendedContainer />
+            <RecommendedContainer />
+            <RecommendedContainer />
+            <RecommendedContainer />
         </div>
     )
 }
