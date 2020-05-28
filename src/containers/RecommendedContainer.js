@@ -5,10 +5,10 @@ import { useParams, Link } from "react-router-dom";
 export const RecommendedContainer = () => {
     const [articles, setArticle] = useState([]);
     const { id } = useParams();
-    console.log(id)
 
-    useEffect(() => {
+    const updateArticles = () => {
         articlesApi.getRecommendedArticles(5).then(data => {
+            // Filter out article with the same id as this page
             const filteredData = data.data.filter(article => article._id !== id)
             setArticle(filteredData)
         }).catch((error) =>{
@@ -17,11 +17,15 @@ export const RecommendedContainer = () => {
                 accessTokenApi.getAccessToken().then((response)=> {
                     apiConfig.accessToken = response.data.accessToken
                     window.localStorage.setItem('access_token', response.data.accessToken);
+                    updateArticles()
                 })
             }
-            //restart function
-        })  
-    }, []);
+        })
+    }
+
+    useEffect(() => {
+        updateArticles()
+    }, );
 
     return (
         <div class="">

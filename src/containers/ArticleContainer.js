@@ -5,18 +5,22 @@ import { Link } from "react-router-dom";
 export const ArticleContainer = () => {
     const [articles, setArticle] = useState([]);
 
-    useEffect(() => {
+    const updateArticles = () =>{
         articlesApi.getRecommendedArticles().then(data => setArticle(data.data)).catch((error) =>{
             console.log(error.response.status)
             if (error.response.status === 401) {
                 accessTokenApi.getAccessToken().then((response)=> {
                     apiConfig.accessToken = response.data.accessToken
                     window.localStorage.setItem('access_token', response.data.accessToken);
+                    updateArticles()
                 })
             }
-            //restart function
         })  
-    }, []);
+    }
+
+    useEffect(() => {
+        updateArticles()
+    }, );
 
     return (
         <div class="">
