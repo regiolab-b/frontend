@@ -52,7 +52,7 @@ export const Article = () => {
                     <h3>Recommended articles</h3>
                 </div>
             </div>
-            <RecommendedContainer />
+            <RecommendedContainer/>
 
         </div>
     )
