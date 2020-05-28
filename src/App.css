@@ -6,7 +6,7 @@
 
 .header-detail {
   text-align: center;
-  margin-top: 3%;
+  margin-top: 6%;
   font-weight: bold;
   color: #ff6600;
 }
@@ -17,14 +17,18 @@
 }
 
 .date {
-  margin-left: 3%;
-  margin-top: 2%;
+  margin-left: 1%;
+  margin-top: 1%;
   font-style: oblique;
 }
 
 .button{
   background-color: orangered;
+  
+
 }
+
+
 
 .recommended {
   text-align: center;
@@ -82,17 +86,11 @@ a {
   /* word-spacing: 25px; */
 }
 
-
-.headerfoto {
-  margin-top:4%;
-  width: 100%;
-  height: auto;
-
-}
-
 @media only screen and (max-width: 700px) {
   .responsive {
       width: 49.99999%;
       margin: 6px 0;
   }
+
+
 }

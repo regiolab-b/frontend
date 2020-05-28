@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react';
 import { useParams, Link} from 'react-router-dom';
 import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
 import '../App.css';
+import Image from 'react-bootstrap/Image'
 
 export const Article = () => {
     const [article, setArticle] = useState([]);
@@ -25,12 +26,19 @@ export const Article = () => {
     
     return (
         <div>
-            <div className="Button">
+            <div className="button">
               <Link to={'/'} class="nav-link" > Go Back </Link>
               </div>
+    
+
+            <div className="header-picture">
+            <Image src="https://dummyimage.com/hd1080" fluid />
+            </div>
+
             <div className="date">
                 <p1>{article.pubDate}</p1> 
-            </div>    
+            </div>
+
             <div class="header-detail">
                 <h2>{ article.headline }</h2>
             </div>
