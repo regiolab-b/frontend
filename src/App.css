@@ -22,6 +22,17 @@
   font-style: oblique;
 }
 
+.button{
+  background-color: orangered;
+}
+
+.recommended {
+  text-align: center;
+  font-size: 4%;
+  margin-top: 8%;
+  color: #ff6600;
+}
+
 a.brand-title:hover {
   color: #ff6600;
   text-decoration: none;
@@ -40,7 +51,9 @@ a.brand-title:hover {
   color:black;
   text-align: center;
   
-} 
+}
+
+
 
 /* .navbar {
   font-family: helvetica;

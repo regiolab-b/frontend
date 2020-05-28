@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState} from 'react';
+import { useParams, Link} from 'react-router-dom';
 import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
 import '../App.css';
 
@@ -20,10 +20,14 @@ export const Article = () => {
             //restart function
         })  
     }, [id]);
+
      
     
     return (
         <div>
+            <div className="Button">
+              <Link to={'/'} class="nav-link" > Go Back </Link>
+              </div>
             <div className="date">
                 <p1>{article.pubDate}</p1> 
             </div>    
@@ -32,6 +36,11 @@ export const Article = () => {
             </div>
             <br></br>
             <div class="container" dangerouslySetInnerHTML={{__html: article.body}}></div>
+            <div class="recommended">
+                <div class="header-recommended">
+                    <h3>Recommended articles</h3>
+                </div>
+            </div>
         </div>
     )
 }
