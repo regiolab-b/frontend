@@ -45,7 +45,7 @@ export const Article = () => {
             </div>
 
             <br></br>
-            
+
             <div class="container" dangerouslySetInnerHTML={{__html: article.body}}></div>
             <div class="recommended">
                 <div class="header-recommended">
@@ -53,9 +53,7 @@ export const Article = () => {
                 </div>
             </div>
             <RecommendedContainer />
-            <RecommendedContainer />
-            <RecommendedContainer />
-            <RecommendedContainer />
+
         </div>
     )
 }
