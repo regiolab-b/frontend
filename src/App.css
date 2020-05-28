@@ -4,6 +4,35 @@
 
 }
 
+.header-detail {
+  text-align: center;
+  margin-top: 6%;
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.header-detail:hover {
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.date {
+  margin-left: 1%;
+  margin-top: 1%;
+  font-style: oblique;
+}
+
+
+
+
+
+.recommended {
+  text-align: center;
+  font-size: 4%;
+  margin-top: 8%;
+  color: #ff6600;
+}
+
 a.brand-title:hover {
   color: #ff6600;
   text-decoration: none;
@@ -22,7 +51,9 @@ a.brand-title:hover {
   color:black;
   text-align: center;
   
-} 
+}
+
+
 
 /* .navbar {
   font-family: helvetica;
@@ -51,17 +82,11 @@ a {
   /* word-spacing: 25px; */
 }
 
-
-.headerfoto {
-  margin-top:4%;
-  width: 100%;
-  height: auto;
-
-}
-
 @media only screen and (max-width: 700px) {
   .responsive {
       width: 49.99999%;
       margin: 6px 0;
   }
+
+
 }
