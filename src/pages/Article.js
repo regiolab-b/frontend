@@ -24,7 +24,7 @@ export const Article = () => {
 
     useEffect(() => {
         updateArticles()
-    }, );
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 
      

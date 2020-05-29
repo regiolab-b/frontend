@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
 import { Link } from "react-router-dom";
+import { useSprings, animated } from 'react-spring'
+import { useDrag } from 'react-use-gesture'
 
 export const ArticleContainer = () => {
-    const [articles, setArticle] = useState([]);
+    const [articles, setArticles] = useState([]);
 
     const updateArticles = () =>{
-        articlesApi.getRecommendedArticles().then(data => setArticle(data.data)).catch((error) =>{
+        articlesApi.getRecommendedArticles().then(data => setArticles(data.data)).catch((error) =>{
             console.log(error.response.status)
             if (error.response.status === 401) {
                 accessTokenApi.getAccessToken().then((response)=> {
@@ -14,32 +16,56 @@ export const ArticleContainer = () => {
                     window.localStorage.setItem('access_token', response.data.accessToken);
                     updateArticles()
                 })
-            }
+            }         
         })  
     }
 
     useEffect(() => {
         updateArticles()
-    }, );
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-    return (
-        <div class="">
-            {articles.map((article, index) => (
-                <>  
-                <div class="container pt-2">
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
-                                    <p class="card-text">{article.lead}</p>
+    const [gone] = useState(() => new Set())
+    const [cards, setCards] = useSprings(articles.length, i => ({ x: 0, y: 0 }))
+    
+    // Set the drag hook and define component movement based on gesture data
+    const bind = useDrag(({ args: [index], down, movement: [mx], direction: [xDir], velocity }) => {
+        const trigger = mx > 200 || mx < -200
+        if (!down && trigger) {
+            gone.add(index)
+            // hierrrrrooo disliken
+            // articles[index]._id
+        }
+
+        setCards((i) => {
+            if (index !== i) return
+
+            const dir = xDir < 0 ? -1 : 1 // Direction should either point left or right
+
+            const isGone = gone.has(index)
+            const x = isGone ? (200 + window.innerWidth) * dir : down ? mx : 0
+            const height = isGone ? 0 : undefined
+            return { x , height}
+        })
+    })
+
+
+    return articles.map((article, index) => (
+                <animated.div class="animated-card" key={index} style={ {x: cards[index].x, y: cards[index].y, 'max-height': cards[index].height} }>
+                    <animated.div {...bind(index)} >
+                        <div class="container pt-2">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
+                                            <p class="card-text">{article.lead}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                </>
-            ))}
-        </div>
+                    </animated.div>
+                </animated.div>
+            )
     )
 }   
