@@ -21,7 +21,7 @@ export const ControlledCarousel = () => {
         <Carousel.Item>
           <img
             className="d-block w-100"
-            src="https://imgo.rgcdn.nl/dbefb3be3cba43c6907b22893c8830d8/opener/Burgemeester-Eddy-Bilder-over-de-gevolgen-van-de-corona-uitbraak-in-Zwartewaterland.jpg?v=ohtV25_oR68SONYEtnLbmA2"
+            src="https://media.nu.nl/m/m1mxqf4afpqw_wd640.jpeg"
             alt=""
           />
         </Carousel.Item>
