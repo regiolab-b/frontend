@@ -7,21 +7,25 @@ import { RecommendedContainer } from '../containers/RecommendedContainer'
 
 export const Article = () => {
     const [article, setArticle] = useState([]);
-    
     const { id } = useParams();
 
-    useEffect(() => {
+    const updateArticles = () => {
         articlesApi.getArticleDetails(id).then(data => setArticle(data.data)).catch((error) =>{
             console.log(error.response.status)
             if (error.response.status === 401) {
                 accessTokenApi.getAccessToken().then((response)=> {
                     apiConfig.accessToken = response.data.accessToken
                     window.localStorage.setItem('access_token', response.data.accessToken);
+                    updateArticles()
                 })
             }
-            //restart function
         })  
-    }, [id]);
+    }
+
+    useEffect(() => {
+        updateArticles()
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
 
      
     
@@ -52,7 +56,7 @@ export const Article = () => {
                     <h3>Recommended articles</h3>
                 </div>
             </div>
-            <RecommendedContainer />
+            <RecommendedContainer/>
 
         </div>
     )
