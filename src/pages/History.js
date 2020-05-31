@@ -1,0 +1,32 @@
+import React from 'react';
+import { useParams, Link} from 'react-router-dom';
+//import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
+import '../App.css';
+import { RecommendedContainer } from '../containers/RecommendedContainer'
+
+export const History = () => {
+  return (
+    <div>
+        <div className="button">
+            <Link to={'/'} class="nav-link" > Go Back </Link>
+        </div>
+
+        <div class="header-history">
+            <h2>History</h2>
+        </div>
+        <div class="text-history">
+          <h7>Dit zijn uw recent gelikete artikelen</h7>
+          </div>
+        <div className="liked-articles">
+        <RecommendedContainer/>
+        </div>
+        <div class="text-history">
+          <h7>Dit zijn uw recent gedislikete artikelen</h7>
+          </div>
+        <div className="liked-articles">
+        <RecommendedContainer/>
+        </div>
+        </div>
+
+)
+}
