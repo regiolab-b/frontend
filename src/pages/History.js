@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams, Link} from 'react-router-dom';
 //import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
 import '../App.css';
-import { RecommendedContainer } from '../containers/RecommendedContainer'
+import { LikeDislikeContainer } from '../containers/LikeDislikeContainer'
 
 export const History = () => {
   return (
@@ -16,17 +16,25 @@ export const History = () => {
         </div>
         <div class="text-history">
           <h7>Dit zijn uw recent gelikete artikelen</h7>
-          </div>
+        </div>
         <div className="liked-articles">
-        <RecommendedContainer/>
+
+        <LikeDislikeContainer/>
+        <LikeDislikeContainer/>
+        <LikeDislikeContainer/>
+
         </div>
         <div class="text-history">
           <h7>Dit zijn uw recent gedislikete artikelen</h7>
-          </div>
+        </div>
         <div className="liked-articles">
-        <RecommendedContainer/>
+
+        <LikeDislikeContainer/>
+        <LikeDislikeContainer/>
+        <LikeDislikeContainer/>
+
         </div>
-        </div>
+    </div>
 
 )
 }
