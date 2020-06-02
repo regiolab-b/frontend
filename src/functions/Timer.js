@@ -1,35 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { articlesApi } from '../services/rnApi';
 import { useParams } from "react-router-dom";
 
 export const Timer = () => {
-  const [startTime, setStartTime] = useState(new Date());
   const { id } = useParams();
-  let timer
-
-  const startTimer = () => {
-    setStartTime(new Date())
-    timer = setInterval(() => {
-      const milliseconds = new Date() - startTime
-      const seconds = (Math.round(milliseconds / 1000))
-
-      if(seconds > 5) {
-        articlesApi.likeArticle(id)
-        stopTimer()
-      }
-    }, 1000);
-  }
-
-  const stopTimer = () => {
-    clearInterval(timer)
-  }
+  let timeout = useRef()
 
   useEffect(() => {
-    startTimer()
+    timeout.current = setTimeout(() => {
+      articlesApi.likeArticle(id)
+    }, 5000)
     return function cleanup() {
-      stopTimer()
+      clearTimeout(timeout.current)
     };
-  }, []);  // eslint-disable-line react-hooks/exhaustive-deps
+  }, [id]); 
 
   return (
     <> </>
