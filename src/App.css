@@ -16,13 +16,26 @@
   text-decoration: none;
 }
 
+.text-history{
+  margin-top: 6%;
+  font-weight: bold;
+  color: #ff6600;
+  margin-left:13%;
+
+}
+
+.header-history {
+  text-align: center;
+  margin-top: 1%;
+  font-weight: bold;
+  color: #ff6600;
+}
+
 .date {
   margin-left: 1%;
   margin-top: 1%;
   font-style: oblique;
 }
-
-
 
 
 
