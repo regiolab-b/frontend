@@ -4,6 +4,7 @@ import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
 import '../App.css';
 import Image from 'react-bootstrap/Image'
 import { RecommendedContainer } from '../containers/RecommendedContainer'
+import { Timer } from '../functions/Timer'
 
 export const Article = () => {
     const [article, setArticle] = useState([]);
@@ -25,12 +26,10 @@ export const Article = () => {
     useEffect(() => {
         updateArticles()
     }, []); // eslint-disable-line react-hooks/exhaustive-deps
-
-
-     
     
     return (
         <div>
+            <Timer />
             <div className="button">
                 <Link to={'/'} class="nav-link" > Go Back </Link>
             </div>

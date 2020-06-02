@@ -12,7 +12,7 @@ export const ControlledCarousel = () => {
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="https://imgo.rgcdn.nl/dbefb3be3cba43c6907b22893c8830d8/opener/Burgemeester-Eddy-Bilder-over-de-gevolgen-van-de-corona-uitbraak-in-Zwartewaterland.jpg?v=ohtV25_oR68SONYEtnLbmA2" alt="First slide"/>
+            <img class="d-block w-100 center-block" src="https://imgo.rgcdn.nl/dbefb3be3cba43c6907b22893c8830d8/opener/Burgemeester-Eddy-Bilder-over-de-gevolgen-van-de-corona-uitbraak-in-Zwartewaterland.jpg?v=ohtV25_oR68SONYEtnLbmA2" alt="First slide"/>
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="https://imgg.rgcdn.nl/6194dcea731945e08bb14697835e2721/opener/Foto-ANP.jpg?v=7fB8rrIf06qef4JodDFLcg2" alt="Second slide"/>

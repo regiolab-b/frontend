@@ -95,10 +95,13 @@ a {
   /* word-spacing: 25px; */
 }
 
-.carousel-item img {
+.carousel-item {
   max-height: 400px;
-  max-width: 100%;
+  width: 100%;
+}
 
+.carousel-item img {
+  
 }
 
 .animated-card {
