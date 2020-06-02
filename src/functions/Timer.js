@@ -13,7 +13,7 @@ export const Timer = () => {
       const milliseconds = new Date() - startTime
       const seconds = (Math.round(milliseconds / 1000))
 
-      if(seconds > 10) {
+      if(seconds > 5) {
         articlesApi.likeArticle(id)
         stopTimer()
       }

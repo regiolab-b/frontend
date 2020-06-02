@@ -33,11 +33,6 @@ export const Article = () => {
             <div className="button">
                 <Link to={'/'} class="nav-link" > Go Back </Link>
             </div>
-    
-
-            <div className="header-picture">
-                <Image src="https://dummyimage.com/hd1080" fluid />
-            </div>
 
             <div className="date">
                 <p1>{article.pubDate}</p1> 
