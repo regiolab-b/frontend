@@ -1,6 +1,5 @@
 import React from 'react';
-import { useParams, Link} from 'react-router-dom';
-//import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
+import {Link} from 'react-router-dom';
 import '../App.css';
 import { LikeDislikeContainer } from '../containers/LikeDislikeContainer'
 
@@ -20,8 +19,7 @@ export const History = () => {
         <div className="liked-articles">
 
         <LikeDislikeContainer/>
-        <LikeDislikeContainer/>
-        <LikeDislikeContainer/>
+
 
         </div>
         <div class="text-history">
@@ -29,9 +27,7 @@ export const History = () => {
         </div>
         <div className="liked-articles">
 
-        <LikeDislikeContainer/>
-        <LikeDislikeContainer/>
-        <LikeDislikeContainer/>
+
 
         </div>
     </div>
