@@ -2,7 +2,6 @@ import React, { useEffect, useState} from 'react';
 import { useParams, Link} from 'react-router-dom';
 import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
 import '../App.css';
-import Image from 'react-bootstrap/Image'
 import { RecommendedContainer } from '../containers/RecommendedContainer'
 import { Timer } from '../functions/Timer'
 
@@ -10,22 +9,22 @@ export const Article = () => {
     const [article, setArticle] = useState([]);
     const { id } = useParams();
 
-    const updateArticles = () => {
+    const updateArticle = () => {
         articlesApi.getArticleDetails(id).then(data => setArticle(data.data)).catch((error) =>{
             console.log(error.response.status)
             if (error.response.status === 401) {
                 accessTokenApi.getAccessToken().then((response)=> {
                     apiConfig.accessToken = response.data.accessToken
                     window.localStorage.setItem('access_token', response.data.accessToken);
-                    updateArticles()
+                    updateArticle()
                 })
             }
         })  
     }
 
     useEffect(() => {
-        updateArticles()
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+        updateArticle()
+    }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
     
     return (
         <div>

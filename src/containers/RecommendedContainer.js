@@ -25,7 +25,7 @@ export const RecommendedContainer = () => {
 
     useEffect(() => {
         updateArticles()
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <div class="">
