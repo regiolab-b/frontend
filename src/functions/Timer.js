@@ -3,7 +3,6 @@ import { articlesApi } from '../services/rnApi';
 import { useParams } from "react-router-dom";
 
 export const Timer = () => {
-  const [seconds, setSeconds] = useState(0);
   const [startTime, setStartTime] = useState(new Date());
   const { id } = useParams();
   let timer
@@ -13,7 +12,6 @@ export const Timer = () => {
     timer = setInterval(() => {
       const milliseconds = new Date() - startTime
       const seconds = (Math.round(milliseconds / 1000))
-      setSeconds(seconds)
 
       if(seconds > 10) {
         articlesApi.likeArticle(id)

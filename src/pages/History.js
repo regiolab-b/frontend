@@ -11,24 +11,16 @@ export const History = () => {
         </div>
 
         <div class="header-history">
-            <h2>History</h2>
+            <h2>Geschiedenis</h2>
         </div>
+        <div class="container">
+
         <div class="text-history">
-          <h7>Dit zijn uw recent gelikete artikelen</h7>
+          <h7>Dit zijn uw recent gelezen en verwijderde artikelen</h7>
         </div>
         <div className="liked-articles">
-
+        </div>
         <LikeDislikeContainer/>
-
-
-        </div>
-        <div class="text-history">
-          <h7>Dit zijn uw recent gedislikete artikelen</h7>
-        </div>
-        <div className="liked-articles">
-
-
-
         </div>
     </div>
 

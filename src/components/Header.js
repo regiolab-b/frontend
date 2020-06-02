@@ -14,7 +14,7 @@ export const Header = () => {
               <Link to={'/'} class="nav-link" > Home </Link>
             </li>
             <li class="nav-item">
-              <Link to={'/history'} class="nav-link" >History</Link>
+              <Link to={'/history'} class="nav-link" >Geschiedenis</Link>
             </li>    
           </ul>
         </div>  
