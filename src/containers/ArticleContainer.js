@@ -32,8 +32,7 @@ export const ArticleContainer = () => {
         const trigger = mx > 200 || mx < -200
         if (!down && trigger) {
             gone.add(index)
-            // hierrrrrooo disliken
-            // articles[index]._id
+            articlesApi.dislikeArticle(articles[index]._id) //Dislike article when swiped
         }
 
         setCards((i) => {

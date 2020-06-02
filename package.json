@@ -15,9 +15,10 @@
     "react-scripts": "3.4.1",
     "react-spring": "^9.0.0-rc.3",
     "react-swipeable": "^5.5.1",
+    "react-tracker": "0.0.8",
     "react-use-gesture": "^7.0.15",
     "reactstrap": "^8.4.1",
-    "regiolab-api-client": "0.0.3"
+    "regiolab-api-client": "0.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
