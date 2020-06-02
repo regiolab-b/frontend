@@ -16,7 +16,7 @@ export const History = () => {
         <div class="container">
 
         <div class="text-history">
-          <h7>Dit zijn uw recent gelezen en verwijderde artikelen</h7>
+          <p>Dit zijn uw recent gelezen en verwijderde artikelen</p>
         </div>
         <div className="liked-articles">
         </div>

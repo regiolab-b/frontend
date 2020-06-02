@@ -49,7 +49,7 @@ export const ArticleContainer = () => {
 
 
     return articles.map((article, index) => (
-                <animated.div class="animated-card" key={index} style={ {x: cards[index].x, y: cards[index].y, 'max-height': cards[index].height} }>
+                <animated.div class="animated-card" key={index} style={ {x: cards[index].x, y: cards[index].y, maxHeight: cards[index].height} }>
                     <animated.div {...bind(index)} >
                         <div class="container pt-2">
                             <div class="row">
