@@ -19,7 +19,7 @@
 .button2 {
   border-radius: 12px;
   background-color: white;
-  border: solid greenyellow;
+  border: solid yellowgreen;
   border-width: 2px;
   font-weight: bold;
   font-size: 13px;
@@ -32,7 +32,6 @@
   text-align: center;
   margin-top: 1%;
   font-weight: bold;
-  
 }
 
 .header-home {
@@ -72,7 +71,7 @@ a.brand-title:hover {
 .brand-title {
   font-family: 'Open Sans Condensed', sans-serif; 
   font-size: 48px; 
-  color:white;
+  color:greenyellow;
   padding-right: 20px;
 }
 
@@ -138,9 +137,11 @@ a {
 
 
 .button.liked {
-  background-image: url("https://www.kindpng.com/picc/m/136-1366226_green-thumbs-up-png-black-and-white-stock.png");
+  border-radius: 12px;
+  background-color: yellowgreen;
   border: none;
-
+  width: 50px;
+  height: 10px;
 
 }
 
