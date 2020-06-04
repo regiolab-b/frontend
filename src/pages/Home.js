@@ -5,8 +5,15 @@ import { ControlledCarousel } from '../Carousel/Carousel'
 export const Home = () => {
     return (
         <div>
+                        <div className="line">
+           
             <ControlledCarousel/>
-            <br/>
+            </div>
+            <div class="header-home">
+            <h2>Recent nieuws</h2>
+        </div>
+
+        
             <ArticleContainer />
         </div>
     )

@@ -16,10 +16,30 @@
 
 }
 
+.button2 {
+  border-radius: 12px;
+  background-color: white;
+  border: solid greenyellow;
+  border-width: 2px;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+
+
+
 .header-history {
   text-align: center;
   margin-top: 1%;
   font-weight: bold;
+  
+}
+
+.header-home {
+  text-align: center;
+  margin-top: 4%;
+  font-weight: bold;
+
 }
 
 .date {
@@ -34,17 +54,34 @@
   text-align: center;
   font-size: 4%;
   margin-top: 8%;
+  color:black;
 }
 
 a.brand-title:hover {
   text-decoration: none;
+  color:yellowgreen;
+}
+
+
+
+.line{
+  background-color: grey;
+  padding-bottom: 3px;
 }
 
 .brand-title {
   font-family: 'Open Sans Condensed', sans-serif; 
   font-size: 48px; 
-  color: rgb(255, 255, 255);
+  color:white;
   padding-right: 20px;
+}
+
+.footer{
+  background-color: greenyellow;
+  padding: 5px;
+  margin-top: 2%;
+  font-weight: bold;
+  font-size:12px;
 }
 
 .title {
@@ -73,7 +110,10 @@ a.brand-title:hover {
 
 a:link {
   text-decoration: none;
+  color:black;
 }
+
+
 
 
 a {
@@ -96,12 +136,21 @@ a {
   max-height: 600px;
 }
 
-.card.liked {
-  border: 2px solid green;
+
+.button.liked {
+  background-image: url("https://www.kindpng.com/picc/m/136-1366226_green-thumbs-up-png-black-and-white-stock.png");
+  border: none;
+
+
 }
 
-.card.disliked{
-  border: 2px solid red;
+.button.disliked{
+  border-radius: 12px;
+  background-color: red;
+  border: none;
+  width: 50px;
+  height: 10px;
+
 }
 
 @media only screen and (max-width: 700px) {

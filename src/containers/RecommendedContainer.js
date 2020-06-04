@@ -38,6 +38,7 @@ export const RecommendedContainer = () => {
                                 <div class="card-body">
                                     <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
                                     <p class="card-text">{article.lead}</p>
+                                    <p class="card-text">{article.pubDate}</p>
                                 </div>
                             </div>
                         </div>

@@ -57,7 +57,10 @@ export const ArticleContainer = () => {
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
+                                            
                                             <p class="card-text">{article.lead}</p>
+                                            <p class="card-text">{article.pubDate}</p>
+                                            <button type="button" class="button2"><Link to={`/articles/${article._id}`}> Read more </Link></button>
                                         </div>
                                     </div>
                                 </div>
@@ -65,6 +68,7 @@ export const ArticleContainer = () => {
                         </div>
                     </animated.div>
                 </animated.div>
+
             )
     )
 }   
