@@ -9,7 +9,6 @@ export const ArticleContainer = () => {
 
     const updateArticles = () =>{
         articlesApi.getRecommendedArticles().then(data => setArticles(data.data)).catch((error) =>{
-            console.log(error.response.status)
             if (error.response.status === 401) {
                 accessTokenApi.getAccessToken().then((response)=> {
                     apiConfig.accessToken = response.data.accessToken
@@ -46,29 +45,26 @@ export const ArticleContainer = () => {
             return { x , height}
         })
     })
-
-
-    return articles.map((article, index) => (
-                <animated.div class="animated-card" key={index} style={ {x: cards[index].x, y: cards[index].y, maxHeight: cards[index].height} }>
-                    <animated.div {...bind(index)} >
-                        <div class="container pt-2">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
-                                            
-                                            <p class="card-text">{article.lead}</p>
-                                            <p class="card-text">{article.pubDate}</p>
-                                            <button type="button" class="button2"><Link to={`/articles/${article._id}`}> Read more </Link></button>
+        return articles.map((article, index) => (
+                    <animated.div class="animated-card" key={index} style={ {x: cards[index].x, y: cards[index].y, maxHeight: cards[index].height} }>
+                        <animated.div {...bind(index)} >
+                            <div class="container pt-2">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
+                                                
+                                                <p class="card-text">{article.lead}</p>
+                                                <p class="card-text">{article.pubDate}</p>
+                                                <button type="button" class="button2"><Link to={`/articles/${article._id}`}> Read more </Link></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </animated.div>
                     </animated.div>
-                </animated.div>
-
-            )
-    )
+                )
+        )
 }   
