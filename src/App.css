@@ -25,8 +25,6 @@
 }
 
 
-
-
 .header-history {
   text-align: center;
   margin-top: 1%;
@@ -37,6 +35,10 @@
   text-align: center;
   margin-top: 4%;
   font-weight: bold;
+}
+
+nav {
+  background-color: #00303F;
 }
 
 .date {
@@ -54,44 +56,26 @@
 
 a.brand-title:hover {
   text-decoration: none;
-  color:yellowgreen;
+  color: rgb(153, 126, 39);
 }
 
 .image{
-  background-image: url("../src/img/icoon.png");
-  align-content:center;
-  padding-top:90%;
-  background-color: rgb(56, 56, 56);
-  max-height: 900px;
-
-
+width: 90px;
 }
 
+
 .card-tutorial{
-  background-color: rgb(56, 56, 56);
-  
+  background-color: rgba(168, 161, 161, 0.13);
   width: 100%;
   height:90%;
+  display: block;
 }
 
 .text-tutorial {
   font-size: 20px;
-  color:white;
+  color:rgb(0, 0, 0);
   font-weight: bold;
-  padding-top: 55%;
   text-align: center;
-  
-}
-
-.understood-button{
-  border-radius: 12px;
-  background-color: rgb(56, 56, 56);
-  border: solid yellowgreen;
-  border-width: 2px;
-  font-weight: bold;
-  font-size: 14px;
-  color:white;
-  margin-top:20%;
 }
 
 
@@ -103,7 +87,7 @@ a.brand-title:hover {
 .brand-title {
   font-family: 'Open Sans Condensed', sans-serif; 
   font-size: 48px; 
-  color:greenyellow;
+  color: #DCAE10;
   padding-right: 20px;
 }
 
@@ -123,33 +107,15 @@ a.brand-title:hover {
   
 }
 
-
-
-/* .navbar {
-  font-family: helvetica;
-  font-size:16px;
-  color: black;
-  list-style-type: none;
-  text-align: center;
-  padding-bottom: 1%;
-  overflow: hidden;
-  margin-top:1%;
-  font-weight: bold;
-  position: sticky;
-} */
-
-
 a:link {
-  text-decoration: none;
+  text-decoration: inherit;
   color:black;
 }
-
-
-
 
 a {
   color: black;
   /* word-spacing: 25px; */
+  text-decoration: inherit;
 }
 
 .carousel-item {
@@ -168,22 +134,16 @@ a {
 }
 
 
-.button.liked {
-  border-radius: 12px;
+.alert.liked {
+  border-radius: 15px;
   background-color: yellowgreen;
   border: none;
-  width: 50px;
-  height: 10px;
-
 }
 
-.button.disliked{
-  border-radius: 12px;
+.alert.disliked{
+  border-radius: 15px;
   background-color: red;
   border: none;
-  width: 50px;
-  height: 10px;
-
 }
 
 @media only screen and (max-width: 700px) {

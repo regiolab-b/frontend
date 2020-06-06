@@ -39,6 +39,7 @@ export const LikeDislikeContainer = () => {
         if (!down && trigger) {
             gone.add(index)
             historyApi.deleteHistoryItem(articles[index]._id) //Dislike article when swiped
+            
         }
 
         setCards((i) => {
@@ -64,7 +65,8 @@ export const LikeDislikeContainer = () => {
                                         <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
                                         <p class="card-text">{article.lead}</p>
                                         <p class="card-text">{article.pubDate}</p>
-                                        <button type="button" class={`button ${article.liked ? 'liked' : 'disliked'}`}></button>
+                                        <div class={`alert ${article.liked ? 'liked' : 'disliked'}`}></div>
+
                                     </div>
                                 </div>
                             </div>
