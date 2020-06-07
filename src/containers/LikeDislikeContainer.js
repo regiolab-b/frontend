@@ -62,7 +62,7 @@ export const LikeDislikeContainer = () => {
                             <div class="col">
                                 <div class={`card ${article.liked ? 'liked' : 'disliked'}`}>
                                     <div class="card-body">
-                                        <h5 class="card-title"><Link to={`/articles/${article._id}`}> {article.headline} </Link></h5>
+                                    <h5 class="card-title"><Link to={`/articles/${article._id}`} style={{ textDecoration: 'none', color: 'black', }}> {article.headline} </Link></h5>
                                         <p class="card-text">{article.lead}</p>
                                         <p class="card-text">{article.pubDate}</p>
                                         <div class={`alert ${article.liked ? 'liked' : 'disliked'}`}></div>
