@@ -57,7 +57,7 @@ export const ArticleContainer = (props) => {
                                                 
                                                 <p class="card-text">{article.lead}</p>
                                                 <p class="card-text">{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
-                                                <button type="button" class="btn btn-warning"><Link to={`/articles/${article._id}`} style={{ textDecoration: 'none', color: 'black'}}> Read more </Link></button>
+                                                <button type="button" class="btn btn-warning"><Link to={`/articles/${article._id}`} style={{ textDecoration: 'none', color: 'black'}}> Lees meer </Link></button>
                                             </div>
                                         </div>
                                     </div>
