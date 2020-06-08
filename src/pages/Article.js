@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react';
 import { useParams, Link} from 'react-router-dom';
 import { articlesApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../services/rnApi';
 import '../App.css';
-import { RecommendedContainer } from '../containers/RecommendedContainer'
+import { ArticleContainer } from '../containers/ArticleContainer'
 import { Timer } from '../functions/Timer'
 
 export const Article = () => {
@@ -49,7 +49,7 @@ export const Article = () => {
                     <h3>Recommended articles</h3>
                 </div>
             </div>
-            <RecommendedContainer/>
+            <ArticleContainer amount={5}/>
 
         </div>
     )

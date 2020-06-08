@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
 
-export const ArticleContainer = () => {
+export const ArticleContainer = (props) => {
     const [articles, setArticles] = useState([]);
     
     const updateArticles = () =>{
-        articlesApi.getRecommendedArticles().then(data => setArticles(data.data)).catch((error) =>{
+        articlesApi.getRecommendedArticles(props.amount).then(data => setArticles(data.data)).catch((error) =>{
             if (error.response.status === 401) {
                 accessTokenApi.getAccessToken().then((response)=> {
                     apiConfig.accessToken = response.data.accessToken

@@ -17,7 +17,7 @@ export const Home = () => {
             <div class="header-home">
                 <h2>Recent nieuws</h2>
             </div>
-            <ArticleContainer />
+            <ArticleContainer amount={50} />
         </div>
     )
 }
