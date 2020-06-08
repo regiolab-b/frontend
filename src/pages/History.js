@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 import { LikeDislikeContainer } from '../containers/LikeDislikeContainer'
+import { ClearHistory } from '../components/ClearHistory'
 
 export const History = () => {
   return (
@@ -22,6 +23,7 @@ export const History = () => {
         </div>
         <LikeDislikeContainer/>
         </div>
+        <ClearHistory/>
     </div>
 
 )
