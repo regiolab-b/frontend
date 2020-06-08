@@ -1,12 +1,19 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import '../App.css';
 
 
 export const SwipeTutorial = () => {
     const [visible, setVisible] = useState(true)
 
+    useEffect(() => {
+        if (window.localStorage.getItem('dismissed_swipe_tutorial')) {
+            setVisible(false)
+        }
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
     function submitHandler() {
         setVisible(false)
+        window.localStorage.setItem('dismissed_swipe_tutorial', 'true')
     }
     
     if (visible === true) {
