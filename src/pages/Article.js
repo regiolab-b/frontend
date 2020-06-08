@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { useParams, Link} from 'react-router-dom';
-import { articlesApi, apiConfig, accessTokenApi } from '../services/rnApi';
+import { articlesApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../services/rnApi';
 import '../App.css';
 import { RecommendedContainer } from '../containers/RecommendedContainer'
 import { Timer } from '../functions/Timer'
@@ -34,7 +34,7 @@ export const Article = () => {
             </div>
 
             <div className="date">
-                <p1>{article.pubDate}</p1> 
+                <p>{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
             </div>
 
             <div class="header-detail">

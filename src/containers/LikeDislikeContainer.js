@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { historyApi, apiConfig, accessTokenApi } from '../services/rnApi';
+import { historyApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../services/rnApi';
 import { Link, useParams } from "react-router-dom";
 import { useSprings, animated } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
@@ -64,7 +64,7 @@ export const LikeDislikeContainer = () => {
                                     <div class="card-body">
                                     <h5 class="card-title"><Link to={`/articles/${article._id}`} style={{ textDecoration: 'none', color: 'black', }}> {article.headline} </Link></h5>
                                         <p class="card-text">{article.lead}</p>
-                                        <p class="card-text">{article.pubDate}</p>
+                                        <p class="card-text">{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
                                         <div class={`alert ${article.liked ? 'liked' : 'disliked'}`}></div>
 
                                     </div>

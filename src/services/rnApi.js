@@ -5,16 +5,16 @@ export const apiConfig = new Configuration({
     accessToken: window.localStorage.getItem('access_token'),
 })
 
+export const dateDisplayOptions = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit"
+  };
 
 export const accessTokenApi = new AccessTokenApi(apiConfig)
 export const articlesApi = new ArticlesApi(apiConfig)
 export const historyApi = new HistoryApi(apiConfig)
 
-//  const articles = articlesApi.getRecommendedArticles().then((response)=> {
-//      console.log(response)
-//  }) 
-
-//  export const getRecommendedArticles = async () => {
-//      const result = articlesApi.getRecommendedArticles().then(({ data }) => data)
-//      return result 
-//  }
