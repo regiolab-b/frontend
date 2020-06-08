@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import { useParams, Link} from 'react-router-dom';
-import { articlesApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../services/rnApi';
+import { articlesApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../services/globalVariables';
 import '../App.css';
 import { ArticleContainer } from '../containers/ArticleContainer'
 import { Timer } from '../functions/Timer'

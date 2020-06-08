@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { articlesApi } from '../services/rnApi';
+import { articlesApi } from '../services/globalVariables';
 import { useParams } from "react-router-dom";
 
 export const Timer = () => {

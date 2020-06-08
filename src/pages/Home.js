@@ -10,7 +10,7 @@ export const Home = () => {
             <ControlledCarousel/>
             </div>
             <div>
-                <SwipeTutorial />
+                <SwipeTutorial/>
             </div>
                 
 

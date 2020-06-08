@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { historyApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../services/rnApi';
+import { historyApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../services/globalVariables';
 import { Link, useParams } from "react-router-dom";
 import { useSprings, animated } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
