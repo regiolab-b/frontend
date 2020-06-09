@@ -42,9 +42,8 @@ nav {
 }
 
 .date {
-  margin-left: 1%;
-  margin-top: 1%;
   font-style: oblique;
+  text-align: center;
 }
 
 .recommended {

@@ -29,9 +29,7 @@ export const Article = () => {
     return (
         <div>
             <Timer />
-            <div className="button">
-                <Link to={'/'} class="nav-link" > Terug </Link>
-            </div>
+            <button type="button" class="btn btn-warning m-3"><Link to={'/'} style={{ textDecoration: 'none', color: 'black'}}> Terug </Link></button>
 
             <div className="date">
                 <p>{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
