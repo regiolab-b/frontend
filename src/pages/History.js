@@ -7,9 +7,8 @@ import { ClearHistory } from '../components/ClearHistory'
 export const History = () => {
   return (
     <div>
-        <div className="button">
-            <Link to={'/'} class="nav-link" > Go Back </Link>
-        </div>
+        <button type="button" class="btn btn-warning m-3"><Link to={'/'} style={{ textDecoration: 'none', color: 'black'}}> Terug </Link></button>
+
 
         <div class="header-history">
             <h2>Geschiedenis</h2>
