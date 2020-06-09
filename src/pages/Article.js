@@ -30,7 +30,7 @@ export const Article = () => {
         <div>
             <Timer />
             <div className="button">
-                <Link to={'/'} class="nav-link" > Go Back </Link>
+                <Link to={'/'} class="nav-link" > Terug </Link>
             </div>
 
             <div className="date">

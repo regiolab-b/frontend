@@ -64,7 +64,7 @@ export const LikeDislikeContainer = () => {
                                     <div class="card-body">
                                     <h5 class="card-title"><Link to={`/articles/${article._id}`} style={{ textDecoration: 'none', color: 'black', }}> {article.headline} </Link></h5>
                                         <p class="card-text">{article.lead}</p>
-                                        <p class="card-text">{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
+                                        <p class="card-text font-weight-light">{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
                                         <div class={`alert ${article.liked ? 'liked' : 'disliked'}`}></div>
 
                                     </div>

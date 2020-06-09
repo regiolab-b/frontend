@@ -32,6 +32,7 @@ export const ArticleContainer = (props) => {
         if (!down && trigger) {
             gone.add(index)
             articlesApi.dislikeArticle(articles[index]._id) //Dislike article when swiped
+            
         }
 
         setCards((i) => {
@@ -56,7 +57,7 @@ export const ArticleContainer = (props) => {
                                                 <h5 class="card-title"><Link to={`/articles/${article._id}`} style={{ textDecoration: 'none', color: 'black', }}> {article.headline} </Link></h5>
                                                 
                                                 <p class="card-text">{article.lead}</p>
-                                                <p class="card-text">{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
+                                                <p class="card-text font-weight-light">{new Date(article.pubDate).toLocaleDateString('NL', dateDisplayOptions)}</p>
                                                 <button type="button" class="btn btn-warning"><Link to={`/articles/${article._id}`} style={{ textDecoration: 'none', color: 'black'}}> Lees meer </Link></button>
                                             </div>
                                         </div>
