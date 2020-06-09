@@ -3,9 +3,12 @@ import { articlesApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../s
 import { Link } from "react-router-dom";
 import { useSprings, animated } from 'react-spring'
 import { useDrag } from 'react-use-gesture'
+import { useAlert } from 'react-alert'
 
 export const ArticleContainer = (props) => {
     const [articles, setArticles] = useState([]);
+    const alert = useAlert()
+    
     
     const updateArticles = () =>{
         articlesApi.getRecommendedArticles(props.amount).then(data => setArticles(data.data)).catch((error) =>{
@@ -32,7 +35,7 @@ export const ArticleContainer = (props) => {
         if (!down && trigger) {
             gone.add(index)
             articlesApi.dislikeArticle(articles[index]._id) //Dislike article when swiped
-            
+            alert.show('Minder van dit soort artikelen')
         }
 
         setCards((i) => {
