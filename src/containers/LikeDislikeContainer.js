@@ -3,11 +3,13 @@ import { historyApi, apiConfig, accessTokenApi, dateDisplayOptions } from '../se
 import { Link, useParams } from "react-router-dom";
 import { useSprings, animated } from 'react-spring';
 import { useDrag } from 'react-use-gesture';
+import { useAlert } from 'react-alert'
 
 export const LikeDislikeContainer = () => {
 
     const [articles, setArticle] = useState([]);
     const { id } = useParams();
+    const alert = useAlert()
 
     const updateArticles = () => {
         historyApi.getHistory().then(data => {
@@ -39,6 +41,7 @@ export const LikeDislikeContainer = () => {
         if (!down && trigger) {
             gone.add(index)
             historyApi.deleteHistoryItem(articles[index]._id) //Dislike article when swiped
+            alert.show('Minder van dit soort artikelen')
             
         }
 
