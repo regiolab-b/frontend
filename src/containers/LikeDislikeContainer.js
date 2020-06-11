@@ -41,7 +41,7 @@ export const LikeDislikeContainer = () => {
         if (!down && trigger) {
             gone.add(index)
             historyApi.deleteHistoryItem(articles[index]._id) //Dislike article when swiped
-            alert.show('Minder van dit soort artikelen')
+            alert.show('Het artikel is uit de geschiedenis verwijderd')
             
         }
 
